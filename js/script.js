@@ -150,5 +150,6 @@ $.ajax({
     },
     success: function (response) {
         console.log("success")
+        bar1.progress(100);
     }
 });

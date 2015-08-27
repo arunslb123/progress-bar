@@ -1,0 +1,174 @@
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+   }
+   div.wrapper {
+       background-color: #ddd;
+       width: 100vw;
+       height: 64px;
+       clear: both;
+       overflow: hidden;
+       margin-top: 16px;
+  }
+  div.arrows {
+      float: left;
+      width: 10%;
+      min-width: 24px;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+ }
+ div.numWrap {
+     float: left;
+     height: 64px;
+     line-height: 64px;
+     width: 80%;
+     vertical-align: middle;
+     overflow: hidden;
+     position: relative;
+     /*  lines added for mobile touch navigation*/
+
+overflow: hidden;
+     overflow-x: scroll;
+     position: relative;
+     z-index: 0;
+     -webkit-overflow-scrolling: touch;
+     -webkit-transform: translatez(0);
+     -ms-overflow-style: -ms-autohiding-scrollbar;
+
+}
+numWrap::-webkit-scrollbar {
+    display: none;
+}
+div.strip {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    white-space: nowrap;
+    transition: left 1s;
+}
+a.numberItem {
+    display: inline-block;
+    text-align: center;
+    margin: 0px 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2em;
+    line-height: 48px;
+    text-decoration: none;
+}
+a.numberItem.visited {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #01aebc;
+}
+a.numberItem.selected {
+    background-color: #01aebc;
+    color: #fff;
+}
+div.controls {
+    clear: both;
+}
+div.controls > div.arrows {
+    width: auto;
+    margin: 0 12px;
+}
+a, a:focus, a:active, a:link, a:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navigation-color {
+    font-size: 40px;
+    color: #01AEBC;
+    text-align: center;
+}
+.leftArrowDisable {
+    color: black;
+}
+.rightArrowDisable {
+    color: black;
+}
+.button {
+    position: relative;
+    margin: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 2.8px;
+    padding-bottom: 2.8px;
+    background: #F55000;
+    color: white;
+    font-size: 14px;
+}
+.button: :after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+}
+.button:hover {
+    background: #EA804C;
+}
+/* Arrow Buttons */
+
+/* ------------- */
+
+.next: :after, .prev: :after {
+    border-style: solid;
+}
+/* Next Button */
+
+/* ----------- */
+
+.next: :after {
+    right: -26px;
+    border-width: 13px;
+    border-color: transparent transparent transparent #F55000;
+}
+.next:hover: :after {
+    border-left-color: #EA804C;
+}
+/* Prev Button */
+
+/* ----------- */
+
+.prev: :after {
+    left: -26px;
+    border-color: transparent #F55000 transparent transparent;
+    border-width: 13px;
+}
+.prev:hover: :after {
+    border-right-color: #EA804C;
+}
+
+
+
+
+
+.container-progress{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display:inline-block;
+    margin:0px 10px 5px 5px;
+    vertical-align:top;
+}
+
+
+.progressbar {
+    color: #fff;
+    text-align: right;
+    height: 25px;
+    width: 0;
+    background-color: #0ba1b5;
+    border-radius: 3px;
+}
+
